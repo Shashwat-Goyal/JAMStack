@@ -15,7 +15,7 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
         <Hero
           image={author.heroImage.gatsbyImageData}
-          title="Shashwat Goyal"
+          title={author.name}
           content={author.shortBio}
         />
         <ArticlePreview posts={posts} />
