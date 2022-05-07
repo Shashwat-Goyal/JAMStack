@@ -7,10 +7,16 @@
   grid-gap: var(--space-3xl);
 }
 
+.preview-image {
+  height: 250px;
+  object-fit: contain;
+}
+
 .title {
-  display: inline-block;
+  display: block;
+  text-align: center;
   font-size: var(--text-lg);
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-lg);
   margin-top: var(--space-lg);
   border-bottom: 1.5px solid transparent;
 }

@@ -18,7 +18,7 @@ const ArticlePreview = ({ posts }) => {
           return (
             <li key={post.node.slug}>
               <Link to={`/blog/${post.node.slug}`} className={styles.link}>
-                <img alt="" src={`https://miro.medium.com/max/1400/${post.node.virtuals.previewImage.imageId}`} />
+                <img className={styles.previewImage} alt="" src={`https://miro.medium.com/max/1400/${post.node.virtuals.previewImage.imageId}`} />
                 <h2 className={styles.title}>{post.node.title}</h2>
               </Link>
               <div>
