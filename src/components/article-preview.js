@@ -16,17 +16,17 @@ const ArticlePreview = ({ posts }) => {
       <ul className={styles.articleList}>
         {posts.map((post) => {
           return (
-            <li key={post.slug}>
-              <Link to={`/blog/${post.slug}`} className={styles.link}>
-                <GatsbyImage alt="" image={post.heroImage.gatsbyImageData} />
-                <h2 className={styles.title}>{post.title}</h2>
+            <li key={post.node.slug}>
+              <Link to={`/blog/${post.node.slug}`} className={styles.link}>
+                <img alt="" src={`https://miro.medium.com/max/1400/${post.node.virtuals.previewImage.imageId}`} />
+                <h2 className={styles.title}>{post.node.title}</h2>
               </Link>
               <div>
-                {post.description?.raw && renderRichText(post.description)}
+                {post.node.content?.subtitle && renderRichText(post.node.content.subtitle)}
               </div>
               <div className={styles.meta}>
-                <small className="meta">{post.publishDate}</small>
-                <Tags tags={post.tags} />
+                <small className="meta">{post.node.firstPublishedAt}</small>
+                <Tags tags={post.node.virtuals.tags} />
               </div>
             </li>
           )

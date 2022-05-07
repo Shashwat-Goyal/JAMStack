@@ -48,5 +48,11 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@shashwatgoyal05`,
+      },
+    },
   ],
 };
